@@ -6,52 +6,87 @@
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
 
 
-/* Reset default styles for body and ul */
-body, ul {
+
+.hero {
+  height: 100vh;
+ 
+  background-size: cover;
+  background-position-y: 100px;
+  display: flex;
+  justify-content: center;
+}
+/* Navigation */
+  
+.navigation {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span {
+  color: yellow;
+  font-size: 1.5em;
+}
+
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1,0);
+  transition: transform 400ms ease-in-out;
+  transform-origin: top;
+}
+
+nav ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-/* Style the navbar */
-.navbar {
-  background-color: transparent; /* Set background color to transparent */
-  position: fixed; /* Fix the navbar position to the top */
-  width: 100%; /* Set width to 100% of the viewport */
-  z-index: 100; /* Set z-index to bring navbar to the front */
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
 }
 
-/* Style the navbar ul */
-.navbar ul {
-  list-style-type: none;
-  display: flex; /* Display the list items in a row */
-  justify-content: center; /* Center the list items horizontally */
-  align-items: center; /* Center the list items vertically */
-  height: 60px; /* Set the height of the navbar */
-}
-
-/* Style the navbar li */
-.navbar li {
-  margin-right: 20px; /* Add spacing between list items */
-}
-
-/* Style the navbar li a */
-.navbar li a {
+nav a {
+  color: yellow;
   text-decoration: none;
-  color: #000; /* Set link color */
-  transition: color 0.3s; /* Add transition effect for link color */
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
 }
 
-/* Style the navbar li a on hover */
-.navbar li a:hover {
-  color: #f00; /* Change link color on hover */
+nav a:hover {
+  color: black;
 }
 
-/* Add margin to sections to offset for fixed navbar */
-section {
-  margin-top: 60px;
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
 }
 
-/* Style the sections */
-section h1, section h2, section p {
-  margin-bottom: 20px; /* Add spacing between section elements */
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
 }
+
+
