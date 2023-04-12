@@ -6,4 +6,52 @@
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
 
 
+/* Reset default styles for body and ul */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
 
+/* Style the navbar */
+.navbar {
+  background-color: transparent; /* Set background color to transparent */
+  position: fixed; /* Fix the navbar position to the top */
+  width: 100%; /* Set width to 100% of the viewport */
+  z-index: 100; /* Set z-index to bring navbar to the front */
+}
+
+/* Style the navbar ul */
+.navbar ul {
+  list-style-type: none;
+  display: flex; /* Display the list items in a row */
+  justify-content: center; /* Center the list items horizontally */
+  align-items: center; /* Center the list items vertically */
+  height: 60px; /* Set the height of the navbar */
+}
+
+/* Style the navbar li */
+.navbar li {
+  margin-right: 20px; /* Add spacing between list items */
+}
+
+/* Style the navbar li a */
+.navbar li a {
+  text-decoration: none;
+  color: #000; /* Set link color */
+  transition: color 0.3s; /* Add transition effect for link color */
+}
+
+/* Style the navbar li a on hover */
+.navbar li a:hover {
+  color: #f00; /* Change link color on hover */
+}
+
+/* Add margin to sections to offset for fixed navbar */
+section {
+  margin-top: 60px;
+}
+
+/* Style the sections */
+section h1, section h2, section p {
+  margin-bottom: 20px; /* Add spacing between section elements */
+}
