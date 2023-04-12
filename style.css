@@ -5,16 +5,18 @@
 
 
 .hero {
-  height: 100vh;
+  height: 300vh;
  
   background-size: cover;
   background-position-y: 100px;
   display: flex;
   justify-content: center;
 }
-/* Navigation */
+
+
+ /* Navigation */
   
-.navigation {
+ .navigation {
   background: var(--background);
   text-align: center;
   position: fixed;
@@ -37,9 +39,10 @@
 }
 
 .nav-toggle-label span {
-  color: whitesmoke;
+  color:white;
   font-size: 1.5em;
 }
+
 
 
 nav {
@@ -66,7 +69,7 @@ nav li {
 }
 
 nav a {
-  color: whitesmoke;
+  color: white;
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -85,5 +88,3 @@ nav a:hover {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
-
-
